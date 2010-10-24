@@ -353,7 +353,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Vendors/facebook-ios-sdk/src\"";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Vendors/facebook-ios-sdk/src\"/**";
 			};
 			name = Debug;
 		};
@@ -371,7 +371,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Vendors/facebook-ios-sdk/src\"";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/../Vendors/facebook-ios-sdk/src\"/**";
 			};
 			name = Release;
 		};
