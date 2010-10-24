@@ -1,6 +1,6 @@
 # DDShareViewController for iPhone and iPod touch
 
-DDShareViewController is designed to share Facebook [Post]s[1] rapidly on small iOS devices.
+DDShareViewController is designed to share Facebook [Post][1]s rapidly on small iOS devices.
 
 ![](http://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot1.png)
 
