@@ -1,0 +1,17 @@
+/* 
+   Localizable.strings
+   DDShareViewController
+
+   Created by digdog on 10/24/10.
+   Copyright 2010 Ching-Lan 'digdog' HUANG. All rights reserved.
+ */
+
+"Share" = "Share";
+"Huh" = "Huh";
+"Connection Failed" = "Connection Failed";
+"Cannot connect to internet, try again when you are back with a valid network connection." = "Cannot connect to internet, try again when you are back with a valid network connection.";
+"OK" = "OK";
+"Everyone" = "Everyone";
+"Friends and Networks" = "Friends and Networks";
+"Friends of Friends" = "Friends of Friends";
+"Only Friends" = "Only Friends";
