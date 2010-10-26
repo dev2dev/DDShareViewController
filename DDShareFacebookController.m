@@ -36,6 +36,7 @@
 @property(nonatomic, assign) NSInteger selectedPrivacyOptionIndex;
 
 - (void)switchPrivacyPicker;
+- (void)switchPrivacyPickerAction;
 @end
 
 
@@ -174,6 +175,13 @@
 	[self.messageView reloadInputViews];
 }
 
+- (void)switchPrivacyPickerAction {
+	
+	if (self.privacyButton.isSelected) {
+		[self switchPrivacyPicker];
+	}
+}
+
 #pragma mark UITextViewDelegate
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
@@ -182,7 +190,7 @@
 		UIControl *privacyButtonHolderView = [[UIControl alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 44.0f)];
 		privacyButtonHolderView.opaque = NO;
 		privacyButtonHolderView.backgroundColor = [UIColor clearColor];
-		[privacyButtonHolderView addTarget:self action:@selector(switchPrivacyPicker) forControlEvents:UIControlEventTouchUpInside];
+		[privacyButtonHolderView addTarget:self action:@selector(switchPrivacyPickerAction) forControlEvents:UIControlEventTouchUpInside];
 
 		UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, self.view.frame.size.width - 64.0f, 34.0f)];
 		titleLabel.text = self.shareName;
