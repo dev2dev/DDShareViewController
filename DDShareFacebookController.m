@@ -184,10 +184,9 @@
 		privacyButtonHolderView.backgroundColor = [UIColor clearColor];
 		[privacyButtonHolderView addTarget:self action:@selector(switchPrivacyPicker) forControlEvents:UIControlEventTouchUpInside];
 
-		UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 0.0f, self.view.frame.size.width - 64.0f, 44.0f)];
+		UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, self.view.frame.size.width - 64.0f, 34.0f)];
 		titleLabel.text = self.shareName;
 		titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		titleLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
 		titleLabel.font = [UIFont boldSystemFontOfSize:13.0f];
 		titleLabel.textColor = [UIColor lightGrayColor];
 		titleLabel.backgroundColor = [UIColor clearColor];
