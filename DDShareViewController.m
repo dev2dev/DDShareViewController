@@ -72,8 +72,8 @@
 
 - (void)setShareName:(NSString *)shareName {
 	
-	if ([self.topViewController isKindOfClass:[DDShareFacebookController class]]) {
-		DDShareFacebookController *rootViewController = (DDShareFacebookController *)self.topViewController;
+	if ([self.topViewController isKindOfClass:[DDShareServiceController class]]) {
+		DDShareServiceController *rootViewController = (DDShareServiceController *)self.topViewController;
 		rootViewController.shareName = shareName;
 	}
 }

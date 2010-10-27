@@ -35,7 +35,6 @@
 @interface DDShareFacebookController : DDShareServiceController <UIPickerViewDataSource, UIPickerViewDelegate, UIGestureRecognizerDelegate, FBRequestDelegate, FBDialogDelegate, FBSessionDelegate> {
 
 	@protected
-	NSString *shareName_;
 	NSString *shareCaption_;
 	NSString *shareDescription_;
 	NSString *sharePictureURL_;
@@ -50,7 +49,6 @@
 }
 
 
-@property(nonatomic, retain) NSString *shareName;
 @property(nonatomic, retain) NSString *shareCaption;
 @property(nonatomic, retain) NSString *shareDescription;
 @property(nonatomic, retain) NSString *sharePictureURL;

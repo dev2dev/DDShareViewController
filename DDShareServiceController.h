@@ -37,6 +37,7 @@
 	id <DDShareInternalDelegate> delegate_;
 	DDShareServiceType type_;
 	NSString *shareURL_;
+	NSString *shareName_;
 	
 	UITextView *messageView_;
 	UIBarButtonItem *cancelItem_;
@@ -49,6 +50,7 @@
 @property(nonatomic, assign) id <DDShareInternalDelegate> delegate;
 @property(nonatomic, readonly) DDShareServiceType type;
 @property(nonatomic, retain) NSString *shareURL;
+@property(nonatomic, retain) NSString *shareName;
 
 @property(nonatomic, retain) IBOutlet UITextView *messageView;
 @property(nonatomic, retain) IBOutlet UIBarButtonItem *cancelItem;

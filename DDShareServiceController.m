@@ -40,6 +40,7 @@
 @synthesize delegate = delegate_;
 @synthesize type = type_;
 @synthesize shareURL = shareURL_;
+@synthesize shareName = shareName_;
 @synthesize messageView = messageView_;
 @synthesize cancelItem = cancelItem_;
 @synthesize shareItem = shareItem_;
@@ -134,7 +135,8 @@
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:nil object:nil];
 	
 	[shareURL_ release];
-	
+	[shareName_ release];
+
 	[messageView_ release];
 	[cancelItem_ release];
 	[shareItem_ release];

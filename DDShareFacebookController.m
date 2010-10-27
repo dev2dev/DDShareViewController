@@ -42,7 +42,6 @@
 
 @implementation DDShareFacebookController
 
-@synthesize shareName = shareName_;
 @synthesize shareCaption = shareCaption_;
 @synthesize shareDescription = shareDescription_;
 @synthesize sharePictureURL = sharePictureURL_;
@@ -101,7 +100,6 @@
 
 - (void)dealloc {
 	
-	[shareName_ release];
 	[shareCaption_ release];
 	[shareDescription_ release];
 	[sharePictureURL_ release];
