@@ -189,7 +189,7 @@
 #pragma mark UITextViewDelegate
 
 - (void)textViewDidChange:(UITextView *)textView {
-	self.shareItem.enabled = ([textView.text length]) ? YES : NO;
+	self.shareItem.enabled = ([self.shareURL length] && [textView.text length]) ? YES : NO;
 }
 
 #pragma mark UIKeyboardWillShowNotification & UIKeyboardWillHideNotification
