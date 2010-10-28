@@ -51,7 +51,7 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-- (id)initWithDelegate:(id <DDShareInternalDelegate>)delegate {	
+- (id)initWithDelegate:(id /*<DDShareInternalDelegate>*/)delegate {	
 	if ((self = [super initWithNibName:@"DDShareServiceController" bundle:nil])) {
 		self.delegate = delegate;
 	}

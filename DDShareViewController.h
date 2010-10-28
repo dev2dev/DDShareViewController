@@ -50,7 +50,7 @@ typedef enum DDShareServiceResult DDShareServiceResult;
 	@private
 	id <DDShareViewControllerDelegate> shareViewControllerDelegate_;
 }
-@property(nonatomic, assign) id <DDShareViewControllerDelegate> shareViewControllerDelegate;
+@property(nonatomic, assign) id /*<DDShareViewControllerDelegate>*/ shareViewControllerDelegate; // weak reference
 @property(nonatomic, readonly) DDShareServiceType type;
 
 - (id)initWithType:(DDShareServiceType)type;

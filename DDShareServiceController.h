@@ -47,7 +47,7 @@
 	UIAlertView *alertView_;
 }
 
-@property(nonatomic, assign) id <DDShareInternalDelegate> delegate;
+@property(nonatomic, assign) id /*<DDShareInternalDelegate>*/ delegate; // weak reference
 @property(nonatomic, readonly) DDShareServiceType type;
 @property(nonatomic, retain) NSString *shareURL;
 @property(nonatomic, retain) NSString *shareName;
@@ -59,7 +59,7 @@
 @property(nonatomic, retain) IBOutlet UIControl *backgroundTouchInterceptingControl;
 @property(nonatomic, retain) UIAlertView *alertView;
 
-- (id)initWithDelegate:(id <DDShareInternalDelegate>)delegate;
+- (id)initWithDelegate:(id /*<DDShareInternalDelegate>*/)delegate;
 
 - (IBAction)cancelAction;
 - (IBAction)shareAction;
