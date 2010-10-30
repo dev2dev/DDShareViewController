@@ -262,9 +262,6 @@
 	
 	NSString *privacyJSON;
 	switch (self.selectedPrivacyOptionIndex) {
-		case 0: // Everyone
-			privacyJSON = @"{'value':'EVERYONE'}";
-			break;
 		case 1: // Friends and Networks
 			privacyJSON = @"{'value':'NETWORKS_FRIENDS'}";
 			break;
@@ -274,7 +271,9 @@
 		case 3: // Only Friends
 			privacyJSON = @"{'value':'ALL_FRIENDS'}";
 			break;
+		case 0: // Everyone as default
 		default:
+			privacyJSON = @"{'value':'EVERYONE'}";
 			break;
 	}
 	
