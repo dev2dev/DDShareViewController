@@ -46,15 +46,14 @@
 	
 	switch (type) {
 		case DDShareServiceTypeFacebook:
-			rootViewController = [[DDShareFacebookController alloc] initWithDelegate:self];
+			rootViewController = [[[DDShareFacebookController alloc] initWithDelegate:self] autorelease];
 			break;
 		default:
 			break;
 	}
 	
-	if (rootViewController && (self = [super initWithRootViewController:rootViewController])) {
-		rootViewController.delegate = self;
-		[rootViewController release];
+	if (rootViewController) {
+		self = [super initWithRootViewController:rootViewController];
 	}
 	return self;
 }
