@@ -56,7 +56,7 @@ Also, don't forget use your own <code>kFacebookAppId</code>, it's defined in DDS
 
 ## License
 
-DDSocialViewController is licensed under MIT license.
+DDSocialViewController is released under MIT License.
 
 [1]: http://developers.facebook.com/docs/reference/api/post
 [2]: http://www.facebook.com/developers/apps.php
