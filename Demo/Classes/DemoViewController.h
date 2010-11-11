@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "DDShareViewController.h"
 
-@interface DemoViewController : UIViewController <DDShareViewControllerDelegate> {
-
+@interface DemoViewController : UIViewController <DDShareViewControllerDelegate, UIActionSheetDelegate> {
+	UIToolbar *demoToolbar;
 }
+@property(nonatomic, retain) IBOutlet UIToolbar *demoToolbar;
 
+- (void)presentShareViewController;
 - (IBAction)demoAction:(id)sender;
-
+- (IBAction)bringUpAlertSheetAction:(id)sender;
 @end
 

@@ -10,7 +10,11 @@
 
 @implementation DemoViewController
 
-- (IBAction)demoAction:(id)sender {
+@synthesize demoToolbar;
+
+#pragma mark public methods
+
+- (void)presentShareViewController {
 	DDShareViewController *shareViewController = [[DDShareViewController alloc] initWithType:DDShareServiceTypeFacebook];
 	shareViewController.shareViewControllerDelegate = self;
 	
@@ -21,8 +25,29 @@
 	
 	[self presentModalViewController:shareViewController animated:YES];
 	
-	[shareViewController release];
+	[shareViewController release];	
 }
+
+- (IBAction)demoAction:(id)sender {
+	[self presentShareViewController];
+}
+
+- (IBAction)bringUpAlertSheetAction:(id)sender {
+	UIActionSheet *alertSheet = [[UIActionSheet alloc] initWithTitle:@"Sharing through UIAlertSheet" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"DDShareViewController" otherButtonTitles:nil];
+	
+	[alertSheet showFromToolbar:self.demoToolbar];
+	[alertSheet release];
+}
+
+#pragma mark UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if (buttonIndex == 0) {
+		[self presentShareViewController];
+	}	
+}
+
+#pragma mark DDShareViewControllerDelegate
 
 - (void)shareViewController:(DDShareViewController *)controller didFinishWithResult:(DDShareServiceResult)result error:(NSError*)error {
 	[self dismissModalViewControllerAnimated:YES];
@@ -72,10 +97,12 @@
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
+	self.demoToolbar = nil;
 }
 
 
 - (void)dealloc {
+	[demoToolbar release];
     [super dealloc];
 }
 
