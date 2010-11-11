@@ -141,9 +141,10 @@
 	// Start Facebook	
 	[self.facebook authorize:kFacebookAppId permissions:[NSArray arrayWithObjects:@"publish_stream", nil] delegate:self];
 	
+	__block __typeof__(self) blockSelf = self;
 	[UIView animateWithDuration:0.2 
 					 animations:^{
-						 self.backgroundTouchInterceptingControl.alpha = 1.0f;
+						 blockSelf.backgroundTouchInterceptingControl.alpha = 1.0f;
 					 }];	
 }
 
@@ -306,9 +307,10 @@
 }
 
 - (void)fbDidNotLogin:(BOOL)cancelled {
+	__block __typeof__(self) blockSelf = self;	
 	[UIView animateWithDuration:0.2 
 					 animations:^{
-						 self.backgroundTouchInterceptingControl.alpha = 0.0f;
+						 blockSelf.backgroundTouchInterceptingControl.alpha = 0.0f;
 					 }];
 	
 	[self.messageView becomeFirstResponder];
@@ -319,9 +321,10 @@
 - (void)request:(FBRequest*)request didReceiveResponse:(NSURLResponse*)response{
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 
+	__block __typeof__(self) blockSelf = self;
     [UIView animateWithDuration:0.2 
                      animations:^{
-                         self.backgroundTouchInterceptingControl.alpha = 0.0f;
+                         blockSelf.backgroundTouchInterceptingControl.alpha = 0.0f;
                      }];
 		
 	if ([self.delegate conformsToProtocol:@protocol(DDShareInternalDelegate)]) {
@@ -334,9 +337,10 @@
 - (void)request:(FBRequest*)request didFailWithError:(NSError*)error {
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 	
+	__block __typeof__(self) blockSelf = self;
     [UIView animateWithDuration:0.2 
                      animations:^{
-                         self.backgroundTouchInterceptingControl.alpha = 0.0f;
+                         blockSelf.backgroundTouchInterceptingControl.alpha = 0.0f;
                      }];
 		
 	if ([self.delegate conformsToProtocol:@protocol(DDShareInternalDelegate)]) {
