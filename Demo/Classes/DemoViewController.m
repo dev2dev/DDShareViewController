@@ -53,6 +53,8 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+#pragma mark -
+
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -71,13 +73,12 @@
 */
 
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"BarButtonItem" style:UIBarButtonItemStyleBordered target:self action:@selector(presentShareViewController)];
 }
-*/
-
 
 /*
 // Override to allow orientations other than the default portrait orientation.

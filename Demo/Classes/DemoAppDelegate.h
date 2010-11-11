@@ -10,13 +10,13 @@
 
 @class DemoViewController;
 
-@interface DemoAppDelegate : NSObject <UIApplicationDelegate> {
+@interface DemoAppDelegate : NSObject <UIApplicationDelegate, UINavigationControllerDelegate> {
     UIWindow *window;
-    DemoViewController *viewController;
+    UINavigationController *navController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet DemoViewController *viewController;
+@property (nonatomic, retain) IBOutlet UINavigationController *navController;
 
 @end
 

@@ -12,7 +12,7 @@
 @implementation DemoAppDelegate
 
 @synthesize window;
-@synthesize viewController;
+@synthesize navController;
 
 
 #pragma mark -
@@ -22,8 +22,8 @@
     
     // Override point for customization after application launch.
 
-    // Add the view controller's view to the window and display.
-    [self.window addSubview:viewController.view];
+    // Add the view controller's view to the window and display.	
+    [self.window addSubview:navController.view];
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -79,7 +79,7 @@
 
 
 - (void)dealloc {
-    [viewController release];
+    [navController release];
     [window release];
     [super dealloc];
 }
