@@ -2,7 +2,7 @@
 
 DDShareViewController is designed to share Facebook [Post][1]s rapidly on small iOS devices.
 
-![](http://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot1.png)
+![](https://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot1.png)
 
 ## Features
 
@@ -48,11 +48,11 @@ Also, don't forget use your own <code>kFacebookAppId</code>, it's defined in DDS
 
 ## Screenshots
 
-![](http://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot2.png)  
+![](https://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot2.png)  
 
-![](http://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot3.png)  
+![](https://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot3.png)  
 
-![](http://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot4.png)  
+![](https://github.com/digdog/DDShareViewController/raw/master/Screenshots/Screenshot4.png)  
 
 ## License
 
